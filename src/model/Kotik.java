@@ -1,6 +1,5 @@
 package model;
 
-import java.util.SortedMap;
 
 public class Kotik {
     private String name;
@@ -53,46 +52,59 @@ public class Kotik {
     public void catInfo() {
         System.out.println("Имя: " + getName() + " \nВозраст: " + getAge() + "\nМасса: " + getWeight() + "\nНасыщенность: " + getFuel());
     }
-public void eat(int fuel) {
-    if (fuel <= 0 || fuel > 5)
-    {
-        System.out.println("Котик, может съесть только от 1 до 5 порций!!!");
-    }
-    if (fuel>0 && fuel < 6){
-        this.fuel += fuel;
-        System.out.println("Отлично," +getName() + " покушал!!!");
-    }
-}
-public void eat(String food, int fuel){
-        if(fuel >0 && fuel<6){
 
-
-        switch (food){
-            case "Рыба":
-                this.fuel+=fuel+3;
-                System.out.println("Котик, любит рыбу!!!");
-                break;
-
-            case "Мясо":
-                this.fuel+=fuel+1;
-                System.out.println("Ммм.. вкусно , но лучше бы это была рыбка!!!");
-                break;
-
-            case "Сосиски":
-                this.fuel+=fuel;
-                System.out.println("Сосиски..?? ну ладно сойдет");
-                break;
-
-            default:
-                System.out.println("Нее... ,я такое не ем!!! Давай - ка (Рыба),(Мясо),(Сосиски)");
-
+    public void eat(int fuel) {
+        if (fuel <= 0 || fuel > 5) {
+            System.out.println("Котик, может съесть только от 1 до 5 порций!!!");
         }
+        if (fuel > 0 && fuel < 6) {
+            this.fuel += fuel;
+            System.out.println("Отлично," + getName() + " покушал!!!");
         }
-        else{
+    }
+
+    public void eat(String food, int fuel) {
+        if (fuel > 0 && fuel < 6) {
+
+
+            switch (food) {
+                case "Рыба":
+                    this.fuel += fuel + 3;
+                    System.out.println("Котик, любит рыбу!!!");
+                    break;
+
+                case "Мясо":
+                    this.fuel += fuel + 1;
+                    System.out.println("Ммм.. вкусно , но лучше бы это была рыбка!!!");
+                    break;
+
+                case "Сосиски":
+                    this.fuel += fuel;
+                    System.out.println("Сосиски..?? ну ладно сойдет");
+                    break;
+
+                default:
+                    System.out.println("Нее... ,я такое не ем!!! Давай - ка (Рыба),(Мясо),(Сосиски)");
+
+            }
+        } else {
             System.out.println("Порций может быть от 1 до 5, Рацион - Рыба, Мясо, Сосиски");
         }
-}
+    }
 
+    public void eat() {
+
+/*
+Третья не принимает параметров, но содержит внутри себя вызов перегрузки
+принимающей название еды и единицы сытости.
+
+Не понимаю как это сделать(
+
+ */
+    }
+
+
+    }
 
 
 }

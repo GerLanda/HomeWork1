@@ -1,8 +1,6 @@
 package model;
 
-
 import java.util.Scanner;
-
 
 public class Kotik {
     private String name;
@@ -63,11 +61,9 @@ public class Kotik {
         this.meow = meow;
     }
 
-
     public void catInfo() {
         System.out.println("Имя: " + getName() + " \nВозраст: " + getAge() + "\nМасса: " + getWeight() + "\nНасыщенность: " + getFuel());
     }
-
 
     public void eat(int fuel) {
 
@@ -82,7 +78,6 @@ public class Kotik {
 
     public void eat(String food, int fuel) {
         if (fuel > 0 && fuel < 6) {
-
 
             switch (food) {
                 case "Рыба":
@@ -102,9 +97,10 @@ public class Kotik {
 
                 default:
                     System.out.println("Нее... ,я такое не ем!!! Давай - ка (Рыба),(Мясо),(Сосиски)");
-
             }
-        } else {
+        }
+
+        else {
             System.out.println("Порций может быть от 1 до 5, Рацион - Рыба, Мясо, Сосиски");
         }
     }
@@ -142,8 +138,6 @@ public class Kotik {
                 switch (j) {
                     case 1:
                         eat(5);
-
-
                     case 2:
                         String randomFood = "";
                         int foodGnerate = (int) (Math.random() * 3) + 1;
@@ -155,18 +149,14 @@ public class Kotik {
                             randomFood = "Сосиски";
                         }
                         eat(randomFood, 5);
-
-
                     case 3:
                         eat();
-
                 }
-            } else {
-
-                System.out.println("Такой команды я не понимаю ,дай \"Кушать\" ");
-
             }
 
+            else {
+                System.out.println("Такой команды я не понимаю ,дай \"Кушать\" ");
+            }
             return false;
         }
     }
@@ -176,7 +166,8 @@ public class Kotik {
             System.out.println("Котик спит...");
             this.fuel = fuel - 5;
             return true;
-        } else {
+        }
+        else {
             System.out.println("Котик голоден и не может уснуть!!!");
             System.out.println("Кота нужно покомрить введите \"Кушать\"");
             Scanner console = new Scanner(System.in);
@@ -186,8 +177,6 @@ public class Kotik {
                 switch (j) {
                     case 1:
                         eat(5);
-
-
                     case 2:
                         String randomFood = "";
                         int foodGnerate = (int) (Math.random() * 3) + 1;
@@ -199,16 +188,12 @@ public class Kotik {
                             randomFood = "Сосиски";
                         }
                         eat(randomFood, 5);
-
-
                     case 3:
                         eat();
-
                 }
-            } else {
-
+            }
+            else {
                 System.out.println("Такой команды я не понимаю ,дай \"Кушать\" ");
-
             }
             return false;
         }
@@ -229,8 +214,6 @@ public class Kotik {
                 switch (j) {
                     case 1:
                         eat(5);
-
-
                     case 2:
                         String randomFood = "";
                         int foodGnerate = (int) (Math.random() * 3) + 1;
@@ -242,16 +225,12 @@ public class Kotik {
                             randomFood = "Сосиски";
                         }
                         eat(randomFood, 5);
-
-
                     case 3:
                         eat();
-
                 }
             } else {
 
                 System.out.println("Такой команды я не понимаю ,дай \"Кушать\" ");
-
             }
             return false;
         }
@@ -272,8 +251,6 @@ public class Kotik {
                 switch (j) {
                     case 1:
                         eat(5);
-
-
                     case 2:
                         String randomFood = "";
                         int foodGnerate = (int) (Math.random() * 3) + 1;
@@ -285,16 +262,12 @@ public class Kotik {
                             randomFood = "Сосиски";
                         }
                         eat(randomFood, 5);
-
-
                     case 3:
                         eat();
-
                 }
-            } else {
-
+            }
+            else {
                 System.out.println("Такой команды я не понимаю ,дай \"Кушать\" ");
-
             }
             return false;
         }
@@ -315,8 +288,6 @@ public class Kotik {
                 switch (j) {
                     case 1:
                         eat(5);
-
-
                     case 2:
                         String randomFood = "";
                         int foodGnerate = (int) (Math.random() * 3) + 1;
@@ -328,16 +299,11 @@ public class Kotik {
                             randomFood = "Сосиски";
                         }
                         eat(randomFood, 5);
-
-
                     case 3:
                         eat();
-
                 }
             } else {
-
                 System.out.println("Такой команды я не понимаю ,дай \"Кушать\" ");
-
             }
             return false;
         }
@@ -367,16 +333,12 @@ public class Kotik {
                 case 1:
                     play();
                     continue;
-
                 case 2:
                     sleep();
                     continue;
-
-
                 case 3:
                     chaseMouse();
                     continue;
-
                 case 4:
                     walkInTheStreet();
                     continue;
@@ -387,8 +349,6 @@ public class Kotik {
         }
         System.out.println("На сегодня всё, день закончен!");
     }
-
-
 }
 
 

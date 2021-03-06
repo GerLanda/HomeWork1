@@ -6,13 +6,14 @@ public class Application {
         Kotik tom = new Kotik();
 
         tom.setName("Том");
-        tom.setAge(5);
-        tom.setWeight(5);
+        tom.setAge(1);
+        tom.setWeight(4);
         tom.eat(5);
+        tom.setMeow("Миууу...");
+        garfild.setMeow("Мяуууууу....");
+        Kotik.comparison(garfild, tom);
 
-        tom.lveAnotherDay();
-
-
+        garfild.lveAnotherDay();
 
 
     }

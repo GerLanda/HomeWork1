@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Kotik {
     private String name;
+    private String meow;
     private int weight;
     private int fuel;
     private int age;
@@ -22,7 +23,7 @@ public class Kotik {
 
     public Kotik() {
         countCats++;
-        System.out.println("Мы нашли нового кота на улице и ничего о нём не знаем.Теперь у нас их: "+countCats);
+        System.out.println("Мы нашли нового кота на улице и ничего о нём не знаем.Теперь у нас их: " + countCats);
     }
 
     public String getName() {
@@ -53,16 +54,26 @@ public class Kotik {
         return fuel;
     }
 
+    public String getMeow() {
+        return meow;
+    }
+
+    public void setMeow(String meow) {
+        this.meow = meow;
+    }
+
+
     public void catInfo() {
         System.out.println("Имя: " + getName() + " \nВозраст: " + getAge() + "\nМасса: " + getWeight() + "\nНасыщенность: " + getFuel());
     }
+
 
     public void eat(int fuel) {
         if (fuel <= 0 || fuel > 5) {
             System.out.println("Котик, может съесть только от 1 до 5 порций!!!");
         }
         if (fuel > 0 && fuel < 6) {
-            this.fuel += fuel+10;
+            this.fuel += fuel + 10;
             System.out.println("Отлично," + getName() + " покушал!!!");
         }
     }
@@ -83,7 +94,7 @@ public class Kotik {
                     break;
 
                 case "Сосиски":
-                    this.fuel += fuel+10;
+                    this.fuel += fuel + 10;
                     System.out.println("Сосиски..?? ну ладно сойдет");
                     break;
 
@@ -169,6 +180,20 @@ public class Kotik {
         }
     }
 
+    public static void comparison(Kotik cat1, Kotik cat2) {
+        if (cat1.getMeow().equals(cat2.getMeow())) {
+            System.out.println(cat1.getName() + " говорит " + cat1.getMeow());
+            System.out.println(cat2.getName() + " говорит " + cat2.getMeow());
+            System.out.println("Коты одинаковые.");
+        } else {
+            System.out.println(cat1.getName() + " говорит " + cat1.getMeow());
+            System.out.println(cat2.getName() + " говорит " + cat2.getMeow());
+            System.out.println("Коты разные.");
+        }
+    }
+
+
+
     public void lveAnotherDay() throws InterruptedException {
 
         for (int i = 0; i < 24; i++) {
@@ -214,25 +239,21 @@ public class Kotik {
                         case 2:
                             String randomFood = "";
                             int foodGnerate = (int) (Math.random() * 3) + 1;
-                          if(foodGnerate==1){
-                              randomFood = "Рыба";
-                          }
-
-                          else if(foodGnerate==2){
-                              randomFood = "Мясо";
-                          }
-                          else if(foodGnerate==3){
-                              randomFood = "Сосиски";
-                          }
-                            eat(randomFood,5);
-                          continue;
+                            if (foodGnerate == 1) {
+                                randomFood = "Рыба";
+                            } else if (foodGnerate == 2) {
+                                randomFood = "Мясо";
+                            } else if (foodGnerate == 3) {
+                                randomFood = "Сосиски";
+                            }
+                            eat(randomFood, 5);
+                            continue;
 
                         case 3:
                             eat();
                             continue;
                     }
-                }
-                else{
+                } else {
 
                     System.out.println("Такой команды я не понимаю ,дай \"Кушать\" ");
 
@@ -241,6 +262,7 @@ public class Kotik {
 
         }
         System.out.println("На сегодня всё, день закончен!");
+
     }
 
 

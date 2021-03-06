@@ -84,22 +84,18 @@ public class Kotik {
                     this.fuel += fuel + 20;
                     System.out.println("Котик, любит рыбу!!!");
                     break;
-
                 case "Мясо":
                     this.fuel += fuel + 20;
                     System.out.println("Ммм.. вкусно , но лучше бы это была рыбка!!!");
                     break;
-
                 case "Сосиски":
                     this.fuel += fuel + 20;
                     System.out.println("Сосиски..?? ну ладно сойдет");
                     break;
-
                 default:
                     System.out.println("Нее... ,я такое не ем!!! Давай - ка (Рыба),(Мясо),(Сосиски)");
             }
         }
-
         else {
             System.out.println("Порций может быть от 1 до 5, Рацион - Рыба, Мясо, Сосиски");
         }
@@ -182,9 +178,11 @@ public class Kotik {
                         int foodGnerate = (int) (Math.random() * 3) + 1;
                         if (foodGnerate == 1) {
                             randomFood = "Рыба";
-                        } else if (foodGnerate == 2) {
+                        }
+                        else if (foodGnerate == 2) {
                             randomFood = "Мясо";
-                        } else if (foodGnerate == 3) {
+                        }
+                        else if (foodGnerate == 3) {
                             randomFood = "Сосиски";
                         }
                         eat(randomFood, 5);

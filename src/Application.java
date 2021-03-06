@@ -1,7 +1,7 @@
-package model;
+import model.Kotik;
 
 public class Application {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args)  {
         Kotik garfild = new Kotik("Гарфилд", 10, 4, 5);
         Kotik tom = new Kotik();
 

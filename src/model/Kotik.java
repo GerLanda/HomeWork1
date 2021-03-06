@@ -93,21 +93,30 @@ public class Kotik {
     }
 
     public void eat() {
-
-/*
-Третья не принимает параметров, но содержит внутри себя вызов перегрузки
-принимающей название еды и единицы сытости.
-
-Не понимаю как это сделать(
-
- */
+        int i = 0;
+        String food = "";
+        i = (int) (Math.random() * 3) + 1;
+        switch (i) {
+            case 1:
+                food = "Рыба";
+                break;
+            case 2:
+                food = "Мясо";
+                break;
+            case 3:
+                food = "Сосиски";
+                break;
+        }
+        eat(food,5);
     }
 
 
-    }
 
 
 }
+
+
+
 
 
 
